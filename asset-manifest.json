@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/wenyichen/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/wenyichen/static/js/main.4fd1bd0f.chunk.js",
+    "main.js.map": "/wenyichen/static/js/main.4fd1bd0f.chunk.js.map",
+    "runtime-main.js": "/wenyichen/static/js/runtime-main.8dc6fc3d.js",
+    "runtime-main.js.map": "/wenyichen/static/js/runtime-main.8dc6fc3d.js.map",
+    "static/js/2.e987f134.chunk.js": "/wenyichen/static/js/2.e987f134.chunk.js",
+    "static/js/2.e987f134.chunk.js.map": "/wenyichen/static/js/2.e987f134.chunk.js.map",
+    "static/js/3.007edbc4.chunk.js": "/wenyichen/static/js/3.007edbc4.chunk.js",
+    "static/js/3.007edbc4.chunk.js.map": "/wenyichen/static/js/3.007edbc4.chunk.js.map",
+    "index.html": "/wenyichen/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/wenyichen/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.e987f134.chunk.js.LICENSE.txt": "/wenyichen/static/js/2.e987f134.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/wenyichen/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8dc6fc3d.js",
+    "static/js/2.e987f134.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.4fd1bd0f.chunk.js"
+  ]
+}
