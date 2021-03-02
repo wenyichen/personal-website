@@ -3,6 +3,9 @@ import './index.css'
 import ReactDOM from 'react-dom';
 import reportWebVitals from './utils/reportWebVitals';
 import { App } from './modules/app/app';
+import { pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 ReactDOM.render(
   <React.StrictMode>

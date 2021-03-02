@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@react-pdf/renderer": "^1.6.13",
     "@types/gapi": "0.0.39",
     "@types/react-router-dom": "^5.1.7",
     "autoprefixer": "^10.2.4",
