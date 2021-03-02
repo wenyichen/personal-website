@@ -1,10 +1,12 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
 import './header.scss'
 
 export const Header = () => (
     <div className="header">
-        <div>
+        <Link to="/">
             wenyi chen
-        </div>
+        </Link>
         <div>
             software engineer @ aws
         </div>

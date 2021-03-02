@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { emailUrl, githubUrl, linkedinUrl, mediumUrl } from '../../constants/constants';
 import './home.scss';
 
@@ -8,8 +10,8 @@ export const Home = () => (
             <a target="_blank" href={mediumUrl}>blog</a>
             <a target="_blank" href={linkedinUrl}>linkedin</a>
             <a target="_blank" href={githubUrl}>github</a>
+            <Link to="/resume">resume</Link>
             <a target="_blank" href={emailUrl}>email</a>
-            <a href="">resume</a>
         </div>
     </div>
 )
