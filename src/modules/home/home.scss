@@ -1,0 +1,15 @@
+.home {
+    width: 100%;
+    height: auto;
+}
+
+.home-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-menu a {
+    padding: 0.5rem 0 0.5rem;
+}
