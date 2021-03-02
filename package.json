@@ -45,9 +45,13 @@
     ]
   },
   "devDependencies": {
+    "@types/gapi": "0.0.39",
     "@types/react-router-dom": "^5.1.7",
     "autoprefixer": "^10.2.4",
+    "gapi": "0.0.3",
+    "gapi-script": "^1.1.0",
     "gh-pages": "^3.1.0",
+    "react-pdf": "^5.2.0",
     "react-router-dom": "^5.2.0"
   }
 }
