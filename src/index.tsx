@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css'
 import ReactDOM from 'react-dom';
 import reportWebVitals from './utils/reportWebVitals';
 import { App } from './modules/index/App';
