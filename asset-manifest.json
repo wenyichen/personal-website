@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/wenyichen/static/js/main.8b22a988.chunk.js",
-    "main.js.map": "/wenyichen/static/js/main.8b22a988.chunk.js.map",
-    "runtime-main.js": "/wenyichen/static/js/runtime-main.3b9c0888.js",
-    "runtime-main.js.map": "/wenyichen/static/js/runtime-main.3b9c0888.js.map",
-    "static/js/2.115f975a.chunk.js": "/wenyichen/static/js/2.115f975a.chunk.js",
-    "static/js/2.115f975a.chunk.js.map": "/wenyichen/static/js/2.115f975a.chunk.js.map",
-    "static/js/3.79901edd.chunk.js": "/wenyichen/static/js/3.79901edd.chunk.js",
-    "static/js/3.79901edd.chunk.js.map": "/wenyichen/static/js/3.79901edd.chunk.js.map",
-    "index.html": "/wenyichen/index.html",
-    "static/js/2.115f975a.chunk.js.LICENSE.txt": "/wenyichen/static/js/2.115f975a.chunk.js.LICENSE.txt"
+    "main.js": "/personal-website/static/js/main.8b22a988.chunk.js",
+    "main.js.map": "/personal-website/static/js/main.8b22a988.chunk.js.map",
+    "runtime-main.js": "/personal-website/static/js/runtime-main.b8fc241f.js",
+    "runtime-main.js.map": "/personal-website/static/js/runtime-main.b8fc241f.js.map",
+    "static/js/2.115f975a.chunk.js": "/personal-website/static/js/2.115f975a.chunk.js",
+    "static/js/2.115f975a.chunk.js.map": "/personal-website/static/js/2.115f975a.chunk.js.map",
+    "static/js/3.79901edd.chunk.js": "/personal-website/static/js/3.79901edd.chunk.js",
+    "static/js/3.79901edd.chunk.js.map": "/personal-website/static/js/3.79901edd.chunk.js.map",
+    "index.html": "/personal-website/index.html",
+    "static/js/2.115f975a.chunk.js.LICENSE.txt": "/personal-website/static/js/2.115f975a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3b9c0888.js",
+    "static/js/runtime-main.b8fc241f.js",
     "static/js/2.115f975a.chunk.js",
     "static/js/main.8b22a988.chunk.js"
   ]
