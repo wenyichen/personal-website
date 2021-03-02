@@ -14,7 +14,6 @@ interface IResource {
 export const ResumePdf = () => {
     const [resource, setResource] = useState<IResource>({ read: () => undefined });
 
-
     useEffect(() => {
         const initGApi = () => {
             window.gapi.client.init({
@@ -58,8 +57,8 @@ export const ResumePdf = () => {
                 className="resume-document"
                 styles={styles.document}
                 file={file}
-                noData="no data"
-                loading="loading..."
+                noData=""
+                loading=""
                 error="failed to load resume"
                 >
                 <Page pageNumber={1} size="4A0" width={1000} style={styles.page} />
@@ -68,6 +67,12 @@ export const ResumePdf = () => {
     )
 }
 
+const ResumeLoading = () => {
+    return <div className="resume-loading">
+        <Loading/>
+    </div>
+}
+
 export const Resume = () => {
-    return <div className="resume"><Suspense fallback={<Loading />}><ResumePdf /></Suspense></div>;
+    return <div className="resume"><Suspense fallback={<ResumeLoading />}><ResumePdf /></Suspense></div>;
 }
