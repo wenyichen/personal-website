@@ -15,8 +15,12 @@ html {
 }
 
 * {
-  cursor: url("images/cursor.png"), crosshair; 
+  cursor: url("images/cursor.png"), default; 
   box-sizing: border-box;
+}
+
+a:hover {
+  cursor: url("images/hover.png"), crosshair; 
 }
 
 a {
