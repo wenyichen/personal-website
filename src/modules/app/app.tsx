@@ -1,14 +1,9 @@
-
-import React from 'react';
-import './app.scss'
-import { Header } from '../header/header';
-import { Home } from '../home/home';
-import {
-  Switch,
-  Route,
-  BrowserRouter as Router
-} from "react-router-dom";
-import { Resume } from '../resume/resume';
+import React from "react";
+import "./app.scss";
+import { Header } from "../header/header";
+import { Home } from "../home/home";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Resume } from "../resume/resume";
 
 export const App = () => {
   return (
@@ -24,8 +19,8 @@ export const App = () => {
           </Route>
         </Switch>
       </Router>
-    </div >
+    </div>
   );
-}
+};
 
 export default App;
