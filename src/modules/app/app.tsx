@@ -4,6 +4,7 @@ import { Header } from "../header/header";
 import { Home } from "../home/home";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import { Resume } from "../resume/resume";
+import { About } from "../about/about";
 
 export const App = () => {
   return (
@@ -11,7 +12,10 @@ export const App = () => {
       <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <Switch>
-          <Route path="/resume">
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/resume">
             <Resume />
           </Route>
           <Route path="/">

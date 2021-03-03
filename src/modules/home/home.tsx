@@ -61,6 +61,7 @@ const Email = () => {
 export const Home = () => (
   <div className="home">
     <div className="home-menu">
+      <Link to="/about">about</Link>
       <a target="_blank" rel="noreferrer" href={mediumUrl}>
         blog
       </a>
