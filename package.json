@@ -78,7 +78,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "scripts": {
-    "start": "node -r dotenv/config scripts/start.js dotenv_config_path=.env",
+    "start": "node -r dotenv/config scripts/start.js dotenv_config_path=.env.development",
     "build": "node -r dotenv/config scripts/build.js dotenv_config_path=.env.production && cpy --rename=404.html build/index.html build",
     "test": "node scripts/test.js",
     "predeploy": "npm run build",
