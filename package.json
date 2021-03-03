@@ -13,6 +13,7 @@
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
+    "@types/react-copy-to-clipboard": "^5.0.0",
     "@types/react-dom": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
@@ -56,6 +57,7 @@
     "prompts": "2.4.0",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
+    "react-copy-to-clipboard": "^5.0.3",
     "react-dev-utils": "^11.0.3",
     "react-dom": "^17.0.1",
     "react-refresh": "^0.8.3",
@@ -102,9 +104,11 @@
   },
   "devDependencies": {
     "@react-pdf/renderer": "^1.6.13",
+    "@types/classnames": "^2.2.11",
     "@types/gapi": "0.0.39",
     "@types/react-router-dom": "^5.1.7",
     "autoprefixer": "^10.2.4",
+    "classnames": "^2.2.6",
     "cpy-cli": "^3.1.1",
     "gapi": "0.0.3",
     "gapi-script": "^1.1.0",
@@ -113,6 +117,7 @@
     "react-pdf": "^5.2.0",
     "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
+    "react-spring": "^8.0.27",
     "webpack-cli": "^4.5.0"
   },
   "jest": {

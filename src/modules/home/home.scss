@@ -11,6 +11,10 @@
   align-items: center;
 }
 
-.home-menu a {
+.home-menu > * {
   padding: 0.5rem 0 0.5rem;
+}
+
+.home-menu-email {
+    position: relative;
 }
