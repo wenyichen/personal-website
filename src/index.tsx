@@ -1,11 +1,18 @@
+
+import 'dotenv/config';
 import React from 'react';
 import './index.css'
 import ReactDOM from 'react-dom';
 import reportWebVitals from './utils/reportWebVitals';
 import { App } from './modules/app/app';
 import { pdfjs } from 'react-pdf';
+import { initGApi } from './apis/gapi';
+
+console.log(process.env);
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+window.gapi.load('client', initGApi);
 
 ReactDOM.render(
   <React.StrictMode>

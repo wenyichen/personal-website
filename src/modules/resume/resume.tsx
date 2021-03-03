@@ -1,28 +1,23 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import { Document, Page } from 'react-pdf';
-import { PDFViewer, StyleSheet } from '@react-pdf/renderer';
+import { StyleSheet } from '@react-pdf/renderer';
 import { resumeFileId } from '../../constants/constants';
-import { wrapPromise } from '../../utils/fetch-utils';
-import { pdfResponseToFile } from '../../utils/pdf-utils';
+import { wrapPromise } from '../../utils/fetchUtils';
+import { pdfResponseToFile } from '../../utils/pdfUtils';
 import { Loading } from '../common/loading';
 import './resume.scss'
+import { callWhenGApiInitialized } from '../../apis/gapi';
 
 interface IResource {
     read(): any
 }
 
+const MAX_PDF_WIDTH = 1000;
+
 export const ResumePdf = () => {
     const [resource, setResource] = useState<IResource>({ read: () => undefined });
 
     useEffect(() => {
-        const initGApi = () => {
-            window.gapi.client.init({
-                'apiKey': 'AIzaSyB7coZjyCZ9vhS5N0_AsrQ_RQt8QyFeVzQ',
-            }).then(getResume).catch(e => {
-                console.log(e)
-            });
-        }
-
         const getResume = () => {
             const request = window.gapi.client.request({
                 path: `https://www.googleapis.com/drive/v3/files/${resumeFileId}/export`,
@@ -32,8 +27,7 @@ export const ResumePdf = () => {
             })
             setResource(wrapPromise(request));
         }
-
-        window.gapi.load('client', initGApi);
+        callWhenGApiInitialized(getResume);
     }, [])
 
     let result;
@@ -43,13 +37,13 @@ export const ResumePdf = () => {
     const styles = StyleSheet.create({
         document: {
             display: 'flex',
-            width: '100%'
         },
         page: {
-            width: "90vw",
             justifyContent: 'center',
         }
     });
+
+    const pageWidth = Math.min(MAX_PDF_WIDTH, window.innerWidth);
 
     return (
         <div>
@@ -60,8 +54,8 @@ export const ResumePdf = () => {
                 noData=""
                 loading=""
                 error="failed to load resume"
-                >
-                <Page pageNumber={1} size="4A0" width={1000} style={styles.page} />
+            >
+                <Page pageNumber={1} size="4A0" width={pageWidth} style={styles.page} />
             </Document>
         </div>
     )
@@ -69,7 +63,7 @@ export const ResumePdf = () => {
 
 const ResumeLoading = () => {
     return <div className="resume-loading">
-        <Loading/>
+        <Loading />
     </div>
 }
 
