@@ -26,6 +26,7 @@ const Email = () => {
     from: {
       position: "absolute",
       left: "-50%",
+      top: "0.5rem", // Fix padding issues
       transform: "translateX(-50%)",
       opacity: 0,
     },
@@ -41,19 +42,19 @@ const Email = () => {
   };
 
   return (
-    <span
+    <div
       className="home-menu-email"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {transitions.map(({ item, key, props }) => (
-        <CopyToClipboard text={emailAddress} onCopy={onCopy}>
-          <animated.a key={key} style={props}>
+        <CopyToClipboard text={emailAddress} key={key} onCopy={onCopy}>
+          <animated.a style={props}>
             {item}
           </animated.a>
         </CopyToClipboard>
       ))}
-    </span>
+    </div>
   );
 };
 
