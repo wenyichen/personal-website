@@ -1,7 +1,6 @@
 export let gApiInitialized = false;
 
 export const initGApi = () => {
-  console.log(process.env.REACT_APP_GAPI_AUTH_TOKEN);
   window.gapi.client
     .init({
       apiKey: process.env.REACT_APP_GAPI_AUTH_TOKEN,
