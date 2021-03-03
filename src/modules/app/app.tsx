@@ -2,7 +2,7 @@ import React from "react";
 import "./app.scss";
 import { Header } from "../header/header";
 import { Home } from "../home/home";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router, Redirect } from "react-router-dom";
 import { Resume } from "../resume/resume";
 import { About } from "../about/about";
 
@@ -18,8 +18,11 @@ export const App = () => {
           <Route exact path="/resume">
             <Resume />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route>
+            <Redirect to="/"/>
           </Route>
         </Switch>
       </Router>

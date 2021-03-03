@@ -15,7 +15,10 @@ export const About = () => (
       <p>
         i'm interested in full-stack web development and artificial
         intelligence. i enjoy delivering new products and tackling hard
-        challenges.
+        challenges. 
+      </p>
+      <p>
+        in my free time i like to trade stonks, drink beer, and travel.
       </p>
       <p>
         feel free to connect on
