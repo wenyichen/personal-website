@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { emailUrl, linkedinUrl } from "../../constants/constants";
 import "./about.scss";
 

@@ -12,10 +12,10 @@ export const App = () => {
       <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <Switch>
-          <Route exact path="/about">
+          <Route path="/about">
             <About />
           </Route>
-          <Route exact path="/resume">
+          <Route path="/resume">
             <Resume />
           </Route>
           <Route exact path="/">
