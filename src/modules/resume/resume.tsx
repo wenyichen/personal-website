@@ -6,6 +6,7 @@ import { downloadFile, pdfResponseToFile } from "../../utils/pdfUtils";
 import { Loading } from "../common/loading";
 import "./resume.scss";
 import { callWhenGApiInitialized } from "../../apis/gapi";
+import useWindowDimensions from "../../utils/mediaUtils";
 
 interface IResource {
   read(): any;
@@ -37,10 +38,7 @@ export const ResumePdf = () => {
 
   return (
     <>
-      <a
-        className="resume-download"
-        onClick={() => file && downloadFile(file)}
-      >
+      <a className="resume-download" onClick={() => file && downloadFile(file)}>
         download
       </a>
       <div className="resume-document-container">
