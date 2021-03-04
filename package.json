@@ -79,7 +79,7 @@
   },
   "scripts": {
     "start": "node -r dotenv/config scripts/start.js dotenv_config_path=.env.development",
-    "build": "node -r dotenv/config scripts/build.js dotenv_config_path=.env.production && cpy --rename=404.html build/index.html build",
+    "build": "node -r dotenv/config scripts/build.js dotenv_config_path=.env.production",
     "test": "node scripts/test.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
