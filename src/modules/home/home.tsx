@@ -40,11 +40,17 @@ const Email = () => {
     setTimeout(() => setIsCopied(false), 1500);
   };
 
+  const onTouchStart = () =>{
+    setIsHovered(true)
+    setTimeout(() => setIsHovered(false), 3000);
+  }
+
   return (
     <div
       className="home-menu-email"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={onTouchStart}
     >
       {transitions.map(({ item, key, props }) => (
         <CopyToClipboard text={emailAddress} key={key} onCopy={onCopy}>
