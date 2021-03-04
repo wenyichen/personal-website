@@ -8,7 +8,7 @@ export const About = () => (
       <p>hi! i'm wenyi.</p>
       <p>
         i'm a software engineer currently working at aws in the bay area. before
-        that, i went to ucsd for my undergrad in computer science.
+        that, i studied at ucsd for my undergrad in computer science.
       </p>
       <p>
         i'm interested in full-stack web development and artificial

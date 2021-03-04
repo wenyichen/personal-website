@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Document, Page } from "react-pdf";
 import { resumeFileId } from "../../constants/constants";
 import { wrapPromise } from "../../utils/fetchUtils";
-import { pdfResponseToFile } from "../../utils/pdfUtils";
+import { downloadFile, pdfResponseToFile } from "../../utils/pdfUtils";
 import { Loading } from "../common/loading";
 import "./resume.scss";
 import { callWhenGApiInitialized } from "../../apis/gapi";
@@ -36,17 +36,25 @@ export const ResumePdf = () => {
   const file = result ? pdfResponseToFile(result) : undefined;
 
   return (
-    <div className="resume-document-container">
-      <Document
-        className="resume-document"
-        file={file}
-        noData=""
-        loading=""
-        error="failed to load resume"
+    <>
+      <a
+        className="resume-download"
+        onClick={() => file && downloadFile(file)}
       >
-        <Page pageNumber={1} size="4A0" width={MAX_PDF_WIDTH} />
-      </Document>
-    </div>
+        download
+      </a>
+      <div className="resume-document-container">
+        <Document
+          className="resume-document"
+          file={file}
+          noData=""
+          loading=""
+          error="failed to load resume"
+        >
+          <Page pageNumber={1} size="4A0" width={MAX_PDF_WIDTH} />
+        </Document>
+      </div>
+    </>
   );
 };
 

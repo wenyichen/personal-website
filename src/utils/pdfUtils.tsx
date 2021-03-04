@@ -12,3 +12,22 @@ export const pdfResponseToFile = (
   });
   return file;
 };
+
+export const downloadFile = (file: File) => {
+  const url = window.URL.createObjectURL(file);
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute(
+    'download',
+    `WenyiChenResume.pdf`,
+  );
+
+  // Append to html link element page
+  document.body.appendChild(link);
+
+  // Start download
+  link.click();
+
+  // Clean up and remove the link
+  link && link.parentNode && link.parentNode.removeChild(link);
+}

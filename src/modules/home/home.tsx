@@ -26,7 +26,6 @@ const Email = () => {
     from: {
       position: "absolute",
       left: "-50%",
-      top: "0.5rem", // Fix padding issues
       transform: "translateX(-50%)",
       opacity: 0,
     },
