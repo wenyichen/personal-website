@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Document, Page } from "react-pdf";
-import { resumeFileId } from "../../constants/constants";
+import { resumeFileId, resumeFileName } from "../../constants/constants";
 import { wrapPromise } from "../../utils/fetchUtils";
 import { downloadFile, pdfResponseToFile } from "../../utils/pdfUtils";
 import { Loading } from "../common/loading";
@@ -37,7 +37,7 @@ export const ResumePdf = () => {
 
   return (
     <>
-      <a className="resume-download" href={URL.createObjectURL(file)} download>
+      <a className="resume-download" href={file && URL.createObjectURL(file)} download={resumeFileName}>
         download
       </a>
       <div className="resume-document-container">

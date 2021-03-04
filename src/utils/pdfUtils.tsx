@@ -1,3 +1,5 @@
+import { resumeFileName } from "../constants/constants";
+
 export const pdfResponseToFile = (
   result: gapi.client.HttpRequestFulfilled<File>
 ) => {
@@ -7,7 +9,7 @@ export const pdfResponseToFile = (
     byteNumbers[i] = byteCharacters.charCodeAt(i);
   }
   const byteArray = new Uint8Array(byteNumbers);
-  const file = new File([byteArray], "Resume", {
+  const file = new File([byteArray], resumeFileName, {
     type: "application/pdf;base64",
   });
   return file;
@@ -19,7 +21,7 @@ export const downloadFile = (file: File) => {
   link.href = url;
   link.setAttribute(
     'download',
-    `WenyiChenResume.pdf`,
+    resumeFileName,
   );
 
   // Append to html link element page
