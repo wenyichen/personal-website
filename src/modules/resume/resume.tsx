@@ -1,8 +1,8 @@
-import React, { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Document, Page } from "react-pdf";
 import { resumeFileId, resumeFileName } from "../../constants/constants";
 import { wrapPromise } from "../../utils/fetchUtils";
-import { downloadFile, pdfResponseToFile } from "../../utils/pdfUtils";
+import { pdfResponseToFile } from "../../utils/pdfUtils";
 import { Loading } from "../common/loading";
 import "./resume.scss";
 import { callWhenGApiInitialized } from "../../apis/gapi";
@@ -37,7 +37,11 @@ export const ResumePdf = () => {
 
   return (
     <>
-      <a className="resume-download" href={file && URL.createObjectURL(file)} download={resumeFileName}>
+      <a
+        className="resume-download"
+        href={file && URL.createObjectURL(file)}
+        download={resumeFileName}
+      >
         download
       </a>
       <div className="resume-document-container">
