@@ -2,16 +2,20 @@ import { Suspense, useEffect, useState } from "react";
 import { Document, Page } from "react-pdf";
 import { resumeFileId, resumeFileName } from "../../constants/constants";
 import { wrapPromise } from "../../utils/fetchUtils";
-import { pdfResponseToFile } from "../../utils/pdfUtils";
+import { pdfResponseToFile, removeTextLayerOffset } from "../../utils/pdfUtils";
 import { Loading } from "../common/loading";
 import "./resume.scss";
 import { callWhenGApiInitialized } from "../../apis/gapi";
+import {
+  useWindowWidth,
+} from '@react-hook/window-size/throttled'
 
 interface IResource {
   read(): any;
 }
 
 const MAX_PDF_WIDTH = 1000;
+
 
 export const ResumePdf = () => {
   const [resource, setResource] = useState<IResource>({
@@ -35,6 +39,7 @@ export const ResumePdf = () => {
   result = resource.read();
   const file = result ? pdfResponseToFile(result) : undefined;
 
+  const screenWidth = useWindowWidth()
   return (
     <>
       <a
@@ -52,7 +57,7 @@ export const ResumePdf = () => {
           loading=""
           error="failed to load resume"
         >
-          <Page pageNumber={1} size="4A0" width={MAX_PDF_WIDTH} />
+          <Page pageNumber={1} size="4A0" width={Math.min(screenWidth, MAX_PDF_WIDTH)} onLoadSuccess={removeTextLayerOffset}/>
         </Document>
       </div>
     </>

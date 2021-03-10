@@ -17,12 +17,9 @@ export const pdfResponseToFile = (
 
 export const downloadFile = (file: File) => {
   const url = window.URL.createObjectURL(file);
-  const link = document.createElement('a');
+  const link = document.createElement("a");
   link.href = url;
-  link.setAttribute(
-    'download',
-    resumeFileName,
-  );
+  link.setAttribute("download", resumeFileName);
 
   // Append to html link element page
   document.body.appendChild(link);
@@ -32,4 +29,14 @@ export const downloadFile = (file: File) => {
 
   // Clean up and remove the link
   link && link.parentNode && link.parentNode.removeChild(link);
+};
+
+export const removeTextLayerOffset = () => {
+  const textLayers = document.querySelectorAll(".react-pdf__Page__textContent");
+    textLayers.forEach((layer: any) => {
+      const { style } = layer;
+      style.top = "0";
+      style.left = "0";
+      style.transform = "";
+  });
 }
